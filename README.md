@@ -15,14 +15,14 @@ Workstation:
 2. Specify environment variables
   - Windows: be sure not to use quotes surrounding values.
 
-- `GCP_PROJECT_ID`: the target Google Cloud project
-- `GCP_BUCKET_NAME`" the target GCP Cloud Storage bucket, without the gs:// prefix.
-- `GCP_KEY_FILE_FULL_PATH`: the full path to the .json key file for the service account.
+- `GCP_PROJECT_ID` = the target Google Cloud project
+- `GCP_BUCKET_NAME` = the target GCP Cloud Storage bucket, without the gs:// prefix.
+- `GCP_KEY_FILE_FULL_PATH` = the full path to the .json key file for the service account.
   - If Windows enter paths with forwardslash instead of backslash. `SET GCP_KEY_FILE_FULL_PATH=c:/path/to/key.json`
-- `MOUNT_SYNC_DIRECTORY`: the root directory to be watched.
+- `MOUNT_SYNC_DIRECTORY` = the root directory to be watched.
   - If Windows enter paths with forwardslash instead of backslash. `SET MOUNT_SYNC_DIRECTORY=d:/mount/root`
-- `INCLUDE_FILE_PATTERN`: the [anymatch](https://github.com/micromatch/anymatch) pattern relative to the `MOUNT_SYNC_DIRECTORY` that specifies the watching context of the watcher. i.e. `**/*.txt` or `DesiredSubFolder/*` etc.
-- `EXCLUDE_FILE_PATTERN`: regex pattern or [anymatch](https://github.com/micromatch/anymatch) to be configured on the watcher to exclude files within the watching context. 
+- `INCLUDE_FILE_PATTERN` = the [anymatch](https://github.com/micromatch/anymatch) pattern relative to the `MOUNT_SYNC_DIRECTORY` that specifies the watching context of the watcher. i.e. `**/*.txt` or `DesiredSubFolder/*` etc.
+- `EXCLUDE_FILE_PATTERN` = regex pattern or [anymatch](https://github.com/micromatch/anymatch) to be configured on the watcher to exclude files within the watching context. 
   - Example regex for MacOS Docker host; to ignore .dotfiles and files that end with `~`: `/(^|[\\/\\])\..|(\w*~(?!\S))/`
   - Simple (anymatch) example; to ignore .txt files `**/*.txt`
 

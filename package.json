@@ -4,7 +4,7 @@
   "description": "Performs a sync of a watched directory structure, enqueues update and remove events, and updates GCP Cloud Storage bucket respectively.",
   "main": "app/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app/index.js"
   },
   "repository": {
     "type": "git",
