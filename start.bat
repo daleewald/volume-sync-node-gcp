@@ -1,7 +1,7 @@
-SET GCP_PROJECT_ID=large-storage-dewaldops-100
-SET GCP_BUCKET_NAME=large-storage-useast1-dewaldops
-SET GCP_KEY_FILE_FULL_PATH=./largeStorageAccount.json
-SET MOUNT_SYNC_DIRECTORY=z:/Software/UserAccessDesign
+SET GCP_PROJECT_ID=your-project-id
+SET GCP_BUCKET_NAME=your-bucket-name
+SET GCP_KEY_FILE_FULL_PATH=path-to-your-key.json
+SET MOUNT_SYNC_DIRECTORY=d:/your/sync/directory
 SET INCLUDE_FILE_PATTERN=**/*
 SET EXCLUDE_FILE_PATTERN=
 npm start
