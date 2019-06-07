@@ -21,7 +21,7 @@ Workstation:
   - If Windows enter paths with forwardslash instead of backslash. `SET GCP_KEY_FILE_FULL_PATH=c:/path/to/key.json`
 - `MOUNT_SYNC_DIRECTORY` = the root directory to be watched.
   - If Windows enter paths with forwardslash instead of backslash. `SET MOUNT_SYNC_DIRECTORY=d:/mount/root`
-- `INCLUDE_FILE_PATTERN` = the [anymatch](https://github.com/micromatch/anymatch) pattern relative to the `MOUNT_SYNC_DIRECTORY` that specifies the watching context of the watcher. i.e. `**/*.txt` or `DesiredSubFolder/*` etc.
+- `INCLUDE_FILE_PATTERN` = the [anymatch](https://github.com/micromatch/anymatch) pattern relative to the `MOUNT_SYNC_DIRECTORY` that specifies the watching context of the watcher. i.e. `**/*.txt` or `DesiredSubFolder/**/*` etc.
 - `EXCLUDE_FILE_PATTERN` = regex pattern or [anymatch](https://github.com/micromatch/anymatch) to be configured on the watcher to exclude files within the watching context. 
   - Example regex for MacOS Docker host; to ignore .dotfiles and files that end with `~`: `/(^|[\\/\\])\..|(\w*~(?!\S))/`
   - Simple (anymatch) example; to ignore .txt files `**/*.txt`
@@ -29,5 +29,4 @@ Workstation:
 ## Run
 In the project directory, after setting environment variables:
 
-## Run
 `npm start`
