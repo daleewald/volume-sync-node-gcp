@@ -1,0 +1,24 @@
+{
+  "name": "volume-sync-node-gcp",
+  "version": "1.0.0",
+  "description": "Performs a sync of a watched directory structure, enqueues update and remove events, and updates GCP Cloud Storage bucket respectively.",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daleewald/volume-sync-node-gcp.git"
+  },
+  "author": "Dale Ewald <dale.ewald@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daleewald/volume-sync-node-gcp/issues"
+  },
+  "homepage": "https://github.com/daleewald/volume-sync-node-gcp#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^2.5.0",
+    "chokidar": "^3.0.1",
+    "p-queue": "^6.0.1"
+  }
+}
