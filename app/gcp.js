@@ -12,8 +12,8 @@ exports.setup = function( PROJECT_ID, KEY_FILE, BUCKET_NAME ) {
 
 exports.upload = async function( sourcePath, targetPath ) {
     return bucket.upload( sourcePath, { destination: targetPath } ).then( ( file ) => {
-        console.log('Upload complete:', targetPath);
-        console.log({result: 'Uploaded', file: targetPath, generation: file[0].metadata.generation});
+        const result = ['Uploaded',targetPath,' => generation',file[0].metadata.generation].join(' ');
+        console.log(result);
     }).catch( ( err ) => {
         console.error( err );
     });
@@ -22,17 +22,19 @@ exports.upload = async function( sourcePath, targetPath ) {
 exports.remove = async function( targetPath ) {
     const file = bucket.file( targetPath );
     return file.exists().then( ( exists ) => {
+        let result;
         if ( exists[0] ) {
             file.delete((err, resp) => {
                 if (err) {
-                    console.error( err );
+                    throw err; //console.error( err );
                 } else {
-                    console.log({result: 'Deleted', file: targetPath});
+                    result = ['Deleted',targetPath].join(' ');
                 }
             });
         } else {
-            console.log(null, {result: 'Did not exist to remove', file: targetPath});
+            result = ['Did not exist to remove', targetPath].join(' ');
         }
+        console.log(result);
     });
 }
 
